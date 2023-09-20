@@ -1,36 +1,21 @@
-from numpy import array, exp
-from scipy.optimize import curve_fit
-import matplotlib.pyplot as plt
 import time
-import numpy as np
-import math
 import pyfftw.interfaces.numpy_fft as fft
 import cmath
 from scipy.fftpack import fft2, ifft2
-from numpy.testing import assert_allclose
-from PIL import Image
-from sklearn.linear_model import LinearRegression
-from scipy import ndimage
-from skimage import io
-from matplotlib import cm
-from sklearn.metrics import mean_squared_error
-from PIL import Image
-import imageio
+import numpy as np
+from scipy import fft
+from skimage.metrics import structural_similarity as ssim
 import os
 from PIL import Image
 import numpy as np
-from scipy import fft
 from scipy.fftpack import dct
 import zlib
 from scipy.fftpack import idct
-import matplotlib.pyplot as plt
-import cv2
 import math
-from skimage.metrics import peak_signal_noise_ratio
 import matplotlib.pyplot as plt
 from skimage.metrics import peak_signal_noise_ratio
 import os
-from skimage.metrics import structural_similarity as ssim
+import argparse
 
 
 # HW 1
@@ -908,20 +893,6 @@ def task_2_compare(img,angle):
 
 
 # hw 8
-import os
-from PIL import Image
-import numpy as np
-
-from scipy.fftpack import dct
-import zlib
-from scipy.fftpack import idct
-
-import math
-import matplotlib.pyplot as plt
-from skimage.metrics import peak_signal_noise_ratio
-import os
-
-import argparse
 
 def split_image_into_blocks(image):
     width, height = image.size
